@@ -15,6 +15,11 @@ vim.keymap.set('n', '<C-j>', '<C-w>k')  -- j moves up for you
 vim.keymap.set('n', '<C-k>', '<C-w>j')  -- k moves down for you
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 
+vim.keymap.set("n", "<A-h>", "<cmd>vertical resize -2<CR>")
+vim.keymap.set("n", "<A-l>", "<cmd>vertical resize +2<CR>")
+vim.keymap.set("n", "<A-j>", "<cmd>resize -2<CR>")
+vim.keymap.set("n", "<A-k>", "<cmd>resize +2<CR>")
+
 -- Yank to system clipboard
 vim.keymap.set({ "n", "v" }, "y", '"+y')
 vim.keymap.set("n", "Y", '"+Y')
@@ -30,6 +35,7 @@ vim.opt.softtabstop = 2    -- how many spaces pressing <Tab> inserts
 vim.opt.shiftwidth = 2     -- how many spaces to use for each indent level (>>, <<, autoindent)
 vim.opt.expandtab = true   -- convert tabs to spaces
 vim.opt.smartindent = true -- smarter auto-indenting for code
+vim.opt.autoindent = true
 
 
 vim.diagnostic.config({
@@ -42,6 +48,7 @@ vim.cmd.colorscheme("gruvbox")
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.opt.scrolloff = 10
+vim.opt.cursorline = true
 
 -- Auto Complete
 vim.opt.completeopt = "menuone,noselect,fuzzy,nosort"
@@ -52,3 +59,15 @@ vim.opt.wildmenu = true
 vim.opt.wildoptions = "pum"
 
 vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<cr>", { desc = "Toggle file explorer" })
+
+-- Quick save
+vim.keymap.set("n", "<C-s>", "<cmd>w<CR>")
+vim.keymap.set("i", "<C-s>", "<Esc><cmd>w<CR>a")
+
+-- Better indentation
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
+-- Search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
