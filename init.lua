@@ -39,6 +39,9 @@ vim.diagnostic.config({
 })
 
 vim.cmd.colorscheme("gruvbox")
+vim.opt.hlsearch = true
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.opt.scrolloff = 10
 
 -- Auto Complete
 vim.opt.completeopt = "menuone,noselect,fuzzy,nosort"
