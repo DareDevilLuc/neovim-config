@@ -60,6 +60,11 @@ MiniSnippets.setup({
 })
 MiniSnippets.start_lsp_server({ match = false })
 
+require("mini.comment").setup()
+
+vim.keymap.set("x", "<C-_>", "gc", { remap = true })
+vim.keymap.set("n", "<C-_>", "gcc", { remap = true })
+
 local cmp = require('blink.cmp')
 cmp.setup({
   keymap = {
