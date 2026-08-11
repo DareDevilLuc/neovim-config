@@ -71,3 +71,6 @@ vim.keymap.set("v", ">", ">gv")
 -- Search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- Rename
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
