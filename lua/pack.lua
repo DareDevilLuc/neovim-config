@@ -16,7 +16,10 @@ vim.pack.add({
     version = vim.version.range('3')
   },
   "https://github.com/MunifTanjim/nui.nvim",
-  "https://github.com/nvim-tree/nvim-web-devicons",
+  {
+    src = "https://github.com/nvim-tree/nvim-web-devicons",
+    tag = "nerd-v2-compat",
+  },
   "https://github.com/windwp/nvim-ts-autotag",
   "https://github.com/ellisonleao/gruvbox.nvim"
 })
@@ -88,7 +91,7 @@ cmp.setup({
   cmdline = {
     keymap = {
       preset = 'cmdline',
-      ["<Tab>"] = { "show", "accept", "fallback"},
+      ["<Tab>"] = { "show", "accept", "fallback" },
     },
     completion = {
       menu = { auto_show = true },
