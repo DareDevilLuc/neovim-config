@@ -40,6 +40,19 @@ vim.lsp.config("clangd", {
   },
 })
 
+vim.lsp.config("pylsp", {
+  settings = {
+    pylsp = {
+      plugins = {
+        jedi = {
+          environment = "/home/daredevilluc/Python/.venv/bin/python",
+        },
+      },
+    },
+  },
+})
+
+
 vim.lsp.enable({
   "lua_ls",
   "clangd",
@@ -49,4 +62,5 @@ vim.lsp.enable({
   "jsonls",
   "bashls",
   "vue_ls",
+  "pylsp"
 })
