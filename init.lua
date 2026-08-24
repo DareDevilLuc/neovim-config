@@ -74,3 +74,6 @@ vim.opt.smartcase = true
 
 -- Renameinit
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
+
+-- window
+vim.o.winborder = "rounded"
