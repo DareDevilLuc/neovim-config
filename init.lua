@@ -44,6 +44,10 @@ vim.diagnostic.config({
   underline = true,
 })
 
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, {
+  desc = "Show diagnostic",
+})
+
 vim.cmd.colorscheme("gruvbox")
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
