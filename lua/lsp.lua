@@ -62,5 +62,7 @@ vim.lsp.enable({
   "jsonls",
   "bashls",
   "vue_ls",
-  "pylsp"
+  "pylsp",
 })
+
+vim.lsp.enable('roslyn_ls')
