@@ -15,8 +15,8 @@ vim.keymap.set('n', '<C-j>', '<C-w>k')  -- j moves up for you
 vim.keymap.set('n', '<C-k>', '<C-w>j')  -- k moves down for you
 vim.keymap.set('n', '<C-l>', '<C-w>l')
 
-vim.keymap.set("n", "<A-l>", "<cmd>vertical resize -2<CR>")
-vim.keymap.set("n", "<A-h>", "<cmd>vertical resize +2<CR>")
+vim.keymap.set("n", "<A-h>", "<cmd>vertical resize -2<CR>")
+vim.keymap.set("n", "<A-l>", "<cmd>vertical resize +2<CR>")
 vim.keymap.set("n", "<A-k>", "<cmd>resize -2<CR>")
 vim.keymap.set("n", "<A-j>", "<cmd>resize +2<CR>")
 
