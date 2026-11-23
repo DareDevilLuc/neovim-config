@@ -65,8 +65,8 @@ MiniSnippets.start_lsp_server({ match = false })
 
 require("mini.comment").setup()
 
-vim.keymap.set("x", "<C-_>", "gc", { remap = true })
-vim.keymap.set("n", "<C-_>", "gcc", { remap = true })
+vim.keymap.set("x", "<C-/>", "gc", { remap = true, desc = "Comment selection" })
+vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Comment line" })
 
 local cmp = require('blink.cmp')
 cmp.setup({
