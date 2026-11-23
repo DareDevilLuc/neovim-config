@@ -101,6 +101,8 @@ cmp.setup({
 
 require("mini.pairs").setup()
 
+require("mini.surround").setup()
+
 require("neo-tree").setup({
   filesystem = {
     filtered_items = {
